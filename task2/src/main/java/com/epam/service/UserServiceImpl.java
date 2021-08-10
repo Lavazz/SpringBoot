@@ -2,17 +2,16 @@ package com.epam.service;
 
 import com.epam.dao.UserDao;
 import com.epam.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+@RequiredArgsConstructor
 @Service
-public class UserServiceImpl implements UserService<User> {
+public class UserServiceImpl implements UserService {
 
-    @Autowired
-    UserDao userDao;
+    private final UserDao userDao;
 
     @Override
     public User create(User entity) {

@@ -15,7 +15,7 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    UserServiceImpl userServiceImpl;
+ private final    UserServiceImpl userServiceImpl;
 
 
     @GetMapping("/")

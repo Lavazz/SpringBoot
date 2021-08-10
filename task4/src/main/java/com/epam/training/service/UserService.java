@@ -1,17 +1,18 @@
 package com.epam.training.service;
 
+import com.epam.training.entity.User;
+
 import java.util.List;
 
-public interface UserService<T> {
+public interface UserService {
 
-    T create(T entity);
+    User create(User entity);
 
-    List<T> getAll();
+    List<User> getAll();
 
-    T findById(long id);
+    User findById(long id);
 
-    void update(T entity);
+    void update(User entity);
 
     void delete(long id);
-
 }

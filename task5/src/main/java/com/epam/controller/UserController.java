@@ -1,7 +1,7 @@
-package com.epam.training.controller;
+package com.epam.controller;
 
-import com.epam.training.entity.User;
-import com.epam.training.service.UserServiceImpl;
+import com.epam.entity.User;
+import com.epam.service.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

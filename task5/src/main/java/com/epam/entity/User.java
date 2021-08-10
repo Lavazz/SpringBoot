@@ -1,4 +1,4 @@
-package com.epam.training.entity;
+package com.epam.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

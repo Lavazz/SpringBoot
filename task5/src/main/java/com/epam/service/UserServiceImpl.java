@@ -1,7 +1,7 @@
-package com.epam.training.service;
+package com.epam.service;
 
-import com.epam.training.dao.UserDao;
-import com.epam.training.entity.User;
+import com.epam.dao.UserDao;
+import com.epam.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

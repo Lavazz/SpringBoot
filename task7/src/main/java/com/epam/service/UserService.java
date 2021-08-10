@@ -1,4 +1,4 @@
-package com.epam.training.service;
+package com.epam.service;
 
 import java.util.List;
 

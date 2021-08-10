@@ -60,7 +60,7 @@
         </executions>
         <configuration>
             <addResources>true</addResources>
-            <mainClass>com.epam.training.LiquibaseApplication</mainClass>
+            <mainClass>com.epam.LiquibaseApplication</mainClass>
         </configuration>
     </plugin>
     <plugin>

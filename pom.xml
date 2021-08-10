@@ -9,6 +9,7 @@
 		<module>task3</module>
 		<module>task5</module>
 		<module>task7</module>
+		<module>task4</module>
 	</modules>
 
 	<groupId>com.epam.training</groupId>

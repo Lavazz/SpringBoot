@@ -1,8 +1,11 @@
 package com.epam.controller;
 
 import com.epam.entity.User;
+import com.epam.service.UserService;
 import com.epam.service.UserServiceImpl;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -20,11 +23,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(controllers = UserController.class)
 class UserControllerMockTest {
 
+    @InjectMocks
+    private  UserController controller;
     @Autowired
     private MockMvc mockMvc;
 
-    @MockBean
-    private UserServiceImpl userCommonServiceImpl;
+    @Mock
+    private UserService userCommonServiceImpl;
 
     @Test
     void allUsers() throws Exception {

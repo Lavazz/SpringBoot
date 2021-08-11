@@ -1,7 +1,7 @@
 package com.epam.controller;
 
 import com.epam.entity.User;
-import com.epam.service.UserServiceImpl;
+import com.epam.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,32 +15,24 @@ import java.util.List;
 @Controller
 public class UserController {
 
-  private final UserServiceImpl userServiceImpl;
+  private final UserService userService;
 
     @GetMapping("/")
     public String start(Model model) {
-        List<User> allUsers = userServiceImpl.getAll();
+        List<User> allUsers = userService.getAll();
         model.addAttribute("allUser", allUsers);
         return "users";
     }
 
     @GetMapping("/create")
-    public String name(@RequestParam(value = "id", required = false) String id, @RequestParam("name") String name, @RequestParam("email") String email) {
-        User user;
-        if (id.equals("")) {
-            user = new User();
-        } else {
-            user = userServiceImpl.findById(Long.parseLong(id));
-        }
-        user.setName(name);
-        user.setEmail(email);
-        userServiceImpl.create(user);
+    public String name(@RequestParam("name") String name, @RequestParam("email") String email) {
+        userService.create(new User(name, email));
         return "redirect:/";
     }
 
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") int id) {
-        userServiceImpl.delete(id);
+        userService.delete(id);
         return "redirect:/";
     }
 

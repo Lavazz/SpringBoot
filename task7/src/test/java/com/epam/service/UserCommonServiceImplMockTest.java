@@ -20,10 +20,10 @@ import static org.mockito.Mockito.*;
 class UserCommonServiceImplMockTest {
 
     @InjectMocks
-    UserServiceImpl userCommonServiceImpl;
+  private   UserServiceImpl userCommonServiceImpl;
 
     @Mock
-    UserDao userDao;
+   private UserDao userDao;
 
     @Test
     void createTest() {
